@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Medsafe · Black Friday 30/10</title>
 <meta name="description" content="Entre no grupo exclusivo de WhatsApp para médicos e estudantes de medicina e receba em primeira mão as condições especiais da Black Friday Medsafe.">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2050642345645657');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -493,6 +507,9 @@
 </style>
 </head>
 <body>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2050642345645657&ev=PageView&noscript=1"
+  /></noscript>
   <div class="page">
     <div class="bg" aria-hidden="true">
       <div class="glow g1"></div>
@@ -647,6 +664,11 @@
       setTimeout(() => cta.style.transition = "", 450);
     });
   }
+  /* ---- Meta Pixel: clique no botão = Lead ---- */
+  cta.addEventListener("click", () => {
+    if (window.fbq) fbq("track", "Lead", { content_name: "Grupo WhatsApp Black Friday" });
+  });
+
   cta.addEventListener("pointerdown", e => {
     const r = cta.getBoundingClientRect();
     const size = Math.max(r.width, r.height);
